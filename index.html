@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <!-- 视口设置，确保手机等设备也能正确缩放 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>博客</title>
+  <!-- 引入外部样式文件 -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 欢迎页部分，刮刮乐的画布和控制面板 -->
+  <section id="hero">
+    <!-- 画布容器，放置多层canvas -->
+    <div id="canvasContainer">
+      <!-- 三个canvas代表三层刮刮乐，id必须对应js中canvasIds数组 -->
+      <canvas id="layer3"></canvas>
+      <canvas id="layer2"></canvas>
+      <canvas id="layer1"></canvas>
+    </div>
+
+    <!-- 光标的圆形高亮环 -->
+    <div id="cursor-ring"></div>
+
+    <!-- 右下角调节面板，包含画笔大小调节和重置按钮 -->
+    <div id="control-panel">
+      <label>
+        画笔大小： <span id="brushValue">40</span> <!-- 显示当前画笔大小 -->
+      </label>
+      <input type="range" id="brushSize" min="10" max="100" value="40" />
+      <button id="resetBtn">重置</button>
+    </div>
+
+    <!-- 页面底部的向下滚动提示 -->
+    <div id="scroll-down">↓ 向下滚动阅读博客</div>
+  </section>
+
+  <!-- 文章内容区域，滚动后可见 -->
+  <section id="content">
+    <article>
+      <h1>欢迎来到我的博客</h1>
+      <p>这里是你的博客正文内容，可以写文章、展示项目等。</p>
+      <p>继续添加内容……</p>
+    </article>
+  </section>
+
+  <!-- 引入外部js脚本 -->
+  <script src="script.js"></script>
+</body>
+</html>
